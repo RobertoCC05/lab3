@@ -1,6 +1,6 @@
 import { useState, useRef  } from 'react'
 import './App.css'
-import Home from './Components/Home'
+
 
 function App() {
 
@@ -38,9 +38,9 @@ const handleLogin = () => {
 
            <h2>Login</h2>
         
-            {
-              !user ?      
-              (<div>
+          
+          
+              <div>
                 <input 
                 type="email"
                 placeholder='Correo'
@@ -55,11 +55,9 @@ const handleLogin = () => {
                 <br/>
                 <button onClick={handleLogin}>Ingresar</button>
                 { error && <p style={{ color: "red" }}>{error}</p> }
-              </div>) : 
-              (
-                <Home email={user.email} />
-              )
-          }
+              </div>
+            
+          
         
 
                 
