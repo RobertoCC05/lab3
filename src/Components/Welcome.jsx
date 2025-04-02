@@ -1,6 +1,4 @@
 
-
-
 export default function Welcome({userName}) {
     return (
         <div>
