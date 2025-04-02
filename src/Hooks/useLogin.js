@@ -1,7 +1,5 @@
-
+/*
 export  function useLogin() {
-
-
     const login = (email, password) => {
         // Fake login check
         if (email === "admin" && password === "1234") {        
@@ -11,4 +9,4 @@ export  function useLogin() {
     };
 
     return { login  };
-}
+}*/

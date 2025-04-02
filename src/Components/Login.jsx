@@ -1,12 +1,8 @@
-
-import { useState, useRef  } from 'react'
+/*import { useState, useRef  } from 'react'
 import { useLogin } from '../Hooks/useLogin'
-import { AuthContext } from '../Context/AuthContext'
-import { useContext } from 'react'
 
 export default function Login() {
 
-    // 3. Consumir el contexto
     const { setUser } = useContext(AuthContext)
     
     const emailRef = useRef()
@@ -55,4 +51,4 @@ export default function Login() {
               </div>                     
         </>
     )
-}
+}*/
