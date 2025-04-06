@@ -8,10 +8,13 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const { login } = useUserState();
+    const logOut = () => {
+        setUser(null);
+    }
     // El provider es un componente que envuelve toda la aplicacion y proporciona el contexto a todos los componentes hijos
     // El provider recibe un valor que es el estado o los estados que queremos compartir
     return(
-        <AuthContext.Provider value= {{user, setUser, login}}>
+        <AuthContext.Provider value= {{user, setUser, login, logOut}}>
             {children}
         </AuthContext.Provider>
 

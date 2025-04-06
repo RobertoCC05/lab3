@@ -30,8 +30,8 @@ export default function Login() {
 
 
     return (
-        <>        
-              <h2>Login</h2>                      
+        <>    
+            <h2>Login</h2>                      
               <div>
                 <input 
                 type="email"

@@ -11,7 +11,7 @@ function App() {
  const { user } = useContext(AuthContext);
   return (
     <>
-        <div>
+        
           {
             !user
             ? 
@@ -21,7 +21,7 @@ function App() {
             //Se usa el componente Home si hay usuario registrado
             <Home />
           }
-        </div>
+        
     </>
   );
 }
