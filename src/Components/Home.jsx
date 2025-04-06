@@ -1,10 +1,12 @@
 import WelcomeWidget from "./WelcomeWidget";
+// Se elimina el prop drilling
+export default function Home(){
 
-export default function Home({email}){
     return (
         <>
         <h1>You are at Home!</h1>
-        <WelcomeWidget email={email}/>
+        <WelcomeWidget />
         </>
+        
     )
 }

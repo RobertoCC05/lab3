@@ -5,19 +5,3 @@ export default function AnonymousUserComponent(){
         </>
     )
 }
-
-
-/*  return (
-        <>
-            <h2>Login</h2>
-            <input  type="email"
-                    placeholder="correo"
-            />
-            <br />
-            <input  type="password"
-                    placeholder="Contraseña"
-            />
-            <br />
-            <button>Ingresar</button>
-        </>
-    )*/

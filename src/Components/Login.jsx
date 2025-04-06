@@ -1,22 +1,20 @@
-/*import { useState, useRef  } from 'react'
-import { useLogin } from '../Hooks/useLogin'
+import { AuthContext } from '../Context/AuthContext';
+import { useContext } from 'react';
+import { useUserState } from '../Hooks/useUserState';
 
 export default function Login() {
-
-    const { setUser } = useContext(AuthContext)
-    
-    const emailRef = useRef()
-    const passwordRef = useRef()
-    const [error, setError] = useState('')
-    
-    
-    const { login } = useLogin()
-    
+    // Se importa el contexto de autenticación y el hook useUserState
+    // Se utiliza el hook useContext para acceder al contexto de autenticación
    
-
+    const { setUser } = useContext(AuthContext);
+    
+     // Se utiliza el hook useUserState para manejar el estado del usuario
+    // Se extraen las referencias de los inputs y el estado de error del hook useUserState
+    const { emailRef, passwordRef, error, login, setError} = useUserState();
     const handleLogin = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
+
         const isSuccess = login(email, password);
         if(!isSuccess)   
         {
@@ -24,8 +22,9 @@ export default function Login() {
         }
         else
         {
-            alert("Bienvenido" + email)    
-            setUser(email)        
+            // importante usar {email} para que no se rompa el contexto
+            // se establece el usuario en el contexto de autenticación
+            setUser({email}) 
         }
     }
 
@@ -51,4 +50,4 @@ export default function Login() {
               </div>                     
         </>
     )
-}*/
+}
